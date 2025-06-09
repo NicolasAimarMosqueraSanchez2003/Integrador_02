@@ -1,0 +1,318 @@
+/* reseteo */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Body */
+body{
+    font-family: 'Madimi One';
+}
+
+.madimi-one-regular {
+    font-family: "Madimi One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* Header */
+header{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: orange;
+}
+
+.Logo{
+    width: 20%;
+}
+
+.Imagen_Logo{
+    width: 100%;
+    filter: drop-shadow(0px 0px 5px black);
+}
+
+.Banner{
+    width: 75%;
+    font-size: 100px;
+    color: red;
+    text-shadow: 0px 10px 5px gold;
+}
+
+.Menu{
+    width: 100%;
+}
+
+a{
+    margin: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+.Navegador {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+    background-color: rgb(255, 136, 0);
+    text-align: center;
+    font-size: 30px;
+}
+
+.Productos {
+    border-bottom: 5px lightblue solid;
+}
+
+.Productos:hover{
+    background-color: lightblue
+}
+
+.Alta {
+    border-bottom: 5px gold solid;
+}
+
+.Alta:hover{
+    background-color: gold
+}
+
+.Contacto {
+    border-bottom: 5px green solid;
+}
+
+.Contacto:hover{
+    background-color: green;
+}
+
+.Nosotros {
+    border-bottom: 5px red solid;
+}
+
+.Nosotros:hover{
+    background-color: red;
+}
+
+.Carrito {
+    border-bottom: 5px violet solid;
+}
+
+.Carrito:hover{
+    background-color: violet;
+}
+
+/* Main */
+main{
+    min-height: 100dvh;
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+    margin: 20px;
+}
+
+/* Pagina Productos */
+.Contenedor_Buscador{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.Buscador{
+    width: 70%;
+    height: 40px;
+    border-radius: 20px;
+    padding: 0 10px;
+}
+
+.Contenedor_Productos{
+    display: flex;
+    justify-content: space-around; 
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: 20px;
+    Background-color: lightgray;
+    padding: 20px;
+    border-radius: 50px;
+    height: auto;
+}
+
+.Card_Producto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
+    width: 300px;
+    height: 650px;
+}
+
+.Imagen_Producto{
+    width: 250px;
+    height: 250px;
+    margin: auto;
+}
+
+.Comprar{
+    display:flex;
+    justify-content: flex-end;
+}
+
+button{
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+button:hover{
+    background-color: green;
+}
+
+/* Pagina Alta y Contacto */
+form{
+    margin: 20px;
+    padding: 20px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightgray;
+}
+
+/* Pagina Nosotros */
+.Contenedor_Nosotros{
+    margin: 20px;
+    padding: 20px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightgray;
+}
+
+.Contenedor_Nosotros, p{
+    text-align: center;
+    margin: 20px;
+    font-size: 20px;
+}
+
+/* Footer */
+footer{
+    background-color: black;
+    padding: 20px;
+}
+
+footer h2 {
+    color: white;
+    text-align: center;
+}
+
+footer h3{
+    color: white;
+    opacity: 0.5;
+}
+
+footer p{
+    color: white;
+}
+
+.Info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+/*carrito*/
+.producto-item {
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+}
+
+
+/* Media Queries para móviles */
+@media (max-width: 768px) {
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Usa min-height en lugar de height para que crezca con el contenido */
+    margin: 0;
+}
+
+/* Header */
+.Logo {
+    width: 100%;
+    text-align: center;
+}
+
+.Imagen_Logo{
+    width: 300px;
+}
+
+.Banner {
+    width: 100%;
+    font-size: 50px;
+}
+
+.Navegador {
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 20px;
+}
+
+/* Main */
+main {
+    min-height: 100dvh;
+}
+
+/* Pagina Productos */
+.Contenedor_Productos {
+    flex-direction: column;
+    align-items: center;
+}
+
+.Card_Producto {
+    width: 90%;
+    height: auto;
+}
+
+/* Pagina Alta */
+.AltaProducto {
+    width: 90%;
+}
+
+#descripcion_corta{
+    width: 90%;
+}
+
+/* Pagina Nosotros */
+.Mapa{
+    width: 90%;
+    height: 300px;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+.Info {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+}
+}

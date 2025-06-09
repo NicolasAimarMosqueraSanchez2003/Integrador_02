@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../asset/css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <title>Contacto</title>
+</head>
+
+<body>
+    <header>
+        <div class="Logo">
+            <img src="../asset/imagenes/Logo_Empreza.png" alt="Logo Kiosco Edna" class="Imagen_Logo">
+        </div>
+        
+        <h1 class="Banner">
+            Kiosco Edna
+        </h1>
+
+        <nav class="Menu">
+            <div class="Navegador">
+                <div class="Productos"><a href="/">Productos</a></div>
+                <div class="Alta"><a href="/alta">Alta de Productos</a></div>
+                <div class="Contacto"><a href="/contacto">Contacto</a></div>
+                <div class="Nosotros"><a href="/nosotros">Nosotros</a></div>
+                <div class="Carrito"><a href="/carrito" class="btn btn-carrito">🛒 Ver Carrito</a></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>
+            Formulario de Contacto
+        </h1>
+        <form action="" class="Form_Contacto">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required minlength="3" pattern="^[A-Za-zÁÉÍÓÚáéíóúñÑ ]+$" placeholder="Solo Letras">
+            <br>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="comentarios">Comentarios:</label>
+            <textarea id="comentarios" name="comentarios" minlength="5" maxlength="500"></textarea>
+            <br>
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+
+    <footer>
+        <h2>
+            Kiosco Edna
+        </h2>
+
+        <section class="Info">
+            <div class="Direccion">
+                <h3>
+                    dirección
+                </h3>
+            
+                <p>
+                    Av. de Mayo 2011
+                </p>            
+            </div>
+
+            <div class="Horario">
+                <h3>
+                    Teléfono
+                </h3>
+            
+                <p>
+                    11-2345-6789
+                </p>
+            </div>
+
+            <div class="Email">
+                <h3>
+                    Email
+                </h3>
+            
+                <p>
+                    nicolasmosquera799@gmail.com
+                </p>
+            </div>
+
+            <div class="Horario">
+                <h3>
+                    Horario
+                </h3>
+        
+                <p>
+                    9:00hs a 20:00hs
+                </p>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../asset/css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <title>Editar</title>
+</head>
+
+<body>
+    <header>
+        <div class="Logo">
+            <img src="../../asset/imagenes/Logo_Empreza.png" alt="Logo Kiosco Edna" class="Imagen_Logo">
+        </div>
+        
+        <h1 class="Banner">
+            Kiosco Edna
+        </h1>
+
+        <nav class="Menu">
+            <div class="Navegador">
+                <div class="Productos"><a href="/">Productos</a></div>
+                <div class="Alta"><a href="/alta">Alta de Productos</a></div>
+                <div class="Contacto"><a href="/contacto">Contacto</a></div>
+                <div class="Nosotros"><a href="/nosotros">Nosotros</a></div>
+                <div class="Carrito"><a href="/carrito" class="btn btn-carrito">🛒 Ver Carrito</a></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+    <h2>Editar Producto</h2>
+    <form action="/api/productos/{{producto._id}}" method="POST" enctype="multipart/form-data" id="form-editar">
+        <input type="hidden" name="_method" value="PUT">
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre" value="{{producto.nombre}}" required><br>
+
+        <label for="precio">Precio:</label>
+        <input type="number" name="precio" id="precio" value="{{producto.precio}}" step="0.01" required><br>
+
+        <label for="stock">Stock:</label>
+        <input type="number" name="stock" id="stock" value="{{producto.stock}}" required><br>
+
+        <label for="marca">Marca:</label>
+        <input type="text" name="marca" id="marca" value="{{producto.marca}}"><br>
+
+        <label for="categoria">Categoría:</label>
+        <input type="text" name="categoria" id="categoria" value="{{producto.categoria}}"><br>
+
+        <label for="descripcion_corta">Descripción corta:</label>
+        <input type="text" name="descripcion_corta" id="descripcion_corta" value="{{producto.descripcion_corta}}" required><br>
+
+        <label for="descripcion_larga">Descripción larga:</label>
+        <textarea name="descripcion_larga" id="descripcion_larga">{{producto.descripcion_larga}}</textarea><br>
+
+        <label for="envio_sin_cargo">Envío sin cargo:</label>
+        <input type="checkbox" name="envio_sin_cargo" {{#if producto.envio_sin_cargo}}checked{{/if}}><br>
+
+        <label for="edad_desde">Edad desde:</label>
+        <input type="number" name="edad_desde" value="{{producto.edad_desde}}"><br>
+
+        <label for="edad_hasta">Edad hasta:</label>
+        <input type="number" name="edad_hasta" value="{{producto.edad_hasta}}"><br>
+
+        <label for="foto">Actualizar Foto (opcional):</label>
+        <input type="file" name="foto" accept="image/*"><br>
+
+        <button type="submit">Guardar cambios</button>
+    </form>
+
+    </main>
+
+    <footer>
+        <h2>
+            Kiosco Edna
+        </h2>
+
+        <section class="Info">
+            <div class="Direccion">
+                <h3>
+                    dirección
+                </h3>
+            
+                <p>
+                    Av. de Mayo 2011
+                </p>            
+            </div>
+
+            <div class="Horario">
+                <h3>
+                    Teléfono
+                </h3>
+            
+                <p>
+                    11-2345-6789
+                </p>
+            </div>
+
+            <div class="Email">
+                <h3>
+                    Email
+                </h3>
+            
+                <p>
+                    nicolasmosquera799@gmail.com
+                </p>
+            </div>
+
+            <div class="Horario">
+                <h3>
+                    Horario
+                </h3>
+        
+                <p>
+                    9:00hs a 20:00hs
+                </p>
+            </div>
+        </section>
+    </footer>
+</form>
+</body>
+</html>

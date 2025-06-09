@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="asset/css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <title>Alta</title>
+</head>
+
+<body>
+    <header>
+        <div class="Logo">
+            <img src="asset/imagenes/Logo_Empreza.png" alt="Logo Kiosco Edna" class="Imagen_Logo">
+        </div>
+        
+        <h1 class="Banner">
+            Kiosco Edna
+        </h1>
+
+        <nav class="Menu">
+            <div class="Navegador">
+                <div class="Productos"><a href="/">Productos</a></div>
+                <div class="Alta"><a href="/alta">Alta de Productos</a></div>
+                <div class="Contacto"><a href="/contacto">Contacto</a></div>
+                <div class="Nosotros"><a href="/nosotros">Nosotros</a></div>
+                <div class="Carrito"><a href="/carrito" class="btn btn-carrito">🛒 Ver Carrito</a></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>
+            Dar de Alta un Producto
+        </h1>
+            <form action="/api/productos" method="POST" enctype="multipart/form-data">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <br>
+                <label for="precio">Precio:</label>
+                <input type="number" id="precio" name="precio" step="0.01" required>
+                <br>
+                <label for="stock">Stock:</label>
+                <input type="number" id="stock" name="stock" required>
+                <br>
+                <label for="marca">Marca:</label>
+                <input type="text" id="marca" name="marca">
+                <br>
+                <label for="categoria">Categoría:</label>
+                <input type="text" id="categoria" name="categoria">
+                <br>
+                <label for="descripcion_corta">Descripción Corta:</label>
+                <input type="text" id="descripcion_corta" name="descripcion_corta" size="100" required>
+                <br>
+                <label for="descripcion_larga">Descripción Larga:</label>
+                <textarea id="descripcion_larga" name="descripcion_larga" minlength="5" maxlength="500"></textarea>
+                <br>
+                <label for="envio_sin_cargo">Envío sin cargo:</label>
+                <input type="checkbox" id="envio_sin_cargo" name="envio_sin_cargo">
+                <br>
+                <label for="edad_desde">Edad Desde:</label>
+                <input type="number" id="edad_desde" name="edad_desde">
+                <br>
+                <label for="edad_hasta">Edad Hasta:</label>
+                <input type="number" id="edad_hasta" name="edad_hasta">
+                <br>
+                <label for="foto">Foto:</label>
+                <input type="file" id="foto" name="foto" accept="image/*">
+                <br>
+                <button type="submit">Enviar</button>
+            </form>
+    </main>
+
+    <footer>
+        <h2>
+            Kiosco Edna
+        </h2>
+
+        <section class="Info">
+            <div class="Direccion">
+                <h3>
+                    dirección
+                </h3>
+            
+                <p>
+                    Av. de Mayo 2011
+                </p>            
+            </div>
+
+            <div class="Horario">
+                <h3>
+                    Teléfono
+                </h3>
+            
+                <p>
+                    11-2345-6789
+                </p>
+            </div>
+
+            <div class="Email">
+                <h3>
+                    Email
+                </h3>
+            
+                <p>
+                    nicolasmosquera799@gmail.com
+                </p>
+            </div>
+
+            <div class="Horario">
+                <h3>
+                    Horario
+                </h3>
+        
+                <p>
+                    9:00hs a 20:00hs
+                </p>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>
